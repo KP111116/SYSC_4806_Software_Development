@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buddy Information Repo</title>
+</head>
+<body>
+<p>
+    <span th:text="'List of Buddy Information'"></span>
+</p>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Phone Number</th>
+    </tr>
+    <tr th:each="buddyInfo: ${listOfBuddies}">
+        <td th:text="${buddyInfo.getName()}"></td>
+        <td th:text="${buddyInfo.getAddress()}"></td>
+        <td th:text="${buddyInfo.getPhoneNumber()}"></td>
+    </tr>
+</table>
+
+</body>
+</html>
